@@ -1,90 +1,74 @@
 
-# Employees data Analysis Project
+# Salary Analysis Project
 
-This project explores employee salary data through preprocessing, analysis, and visualization. The goal is to clean the dataset, handle missing values, categorize age groups, and generate insights into salary expenditure patterns across teams and positions.
-
----
-
-## 📊 Preprocessing Steps
-- **Missing Values (Salary):**  
-  - Filled missing salary values using the **median** (robust against outliers).  
-  - Alternative approach: group-wise median imputation by position/team.  
-
-- **Missing Values (College):**  
-  - Filled missing college entries using the **mode** (most frequent value).  
-  - Group-wise mode imputation was also considered for more context-aware filling.  
-
-- **Age Categorization:**  
-  - Created four age groups: **20–30, 31–40, 41–50, 51–60** using `pd.cut`.  
-  - This enabled grouped analysis and visualization of age demographics.  
-
-- **Column Management:**  
-  - Dropped unnecessary columns when required using `df.drop(columns=[...])`.  
+This project explores employee salary data from ABC Company, consisting of 458 rows and 9 columns. The objective was to preprocess the dataset, analyze employee attributes, and present findings through clear visualizations. The work demonstrates proficiency in Python programming, data preprocessing, exploratory analysis, and effective communication of insights.
 
 ---
 
-## 📈 Analysis Tasks
-1. **Predominant Age Group**  
-   - Categorized employees into age groups.  
-   - Visualized distribution using donut charts and lollipop charts.  
-   - Identified the most common age group in the dataset.  
+## Overview
 
-2. **Salary Expenditure by Team**  
-   - Aggregated salary expenditure per team.  
-   - Built **horizontal lollipop charts** with professional styling to show expenditure distribution.  
-
-3. **Correlation Between Age and Salary**  
-   - Explored relationship using scatterplots with regression lines.  
-   - Built **density plots, hexbin plots, and jointplots** to visualize clustering and trends.  
-   - Tested alternative best-fit lines (linear, polynomial, LOWESS, spline) to model the relationship.  
+The dataset provides information about employees across various teams and positions. The project involved cleaning the data, handling missing values, categorizing age groups, and investigating salary expenditure patterns. Graphical representations were used to highlight trends and correlations, making the analysis accessible and professional.
 
 ---
 
-## 🎨 Graphical Representations
-- **Donut Chart:** Age group distribution with counts and percentages.  
-- **Lollipop Chart:** Salary expenditure by team (horizontal orientation, bright professional colors).  
+## Preprocessing
+
+- Corrected the **height** column by replacing values with random numbers between 150 and 180 to ensure consistency.  
+- Handled missing values in the **Salary** column by imputing the median, ensuring robustness against outliers.  
+- Filled missing values in the **College** column using the mode (most frequent value).  
+- Categorized the **Age** column into four groups: **20–30, 31–40, 41–50, 51–60**.  
+- Dropped unnecessary columns when required to streamline the dataset.  
+
+---
+
+## Analysis
+
+1. **Team Distribution**  
+   - Calculated the number of employees per team and their percentage split relative to the total workforce.  
+
+2. **Position Segregation**  
+   - Segregated employees by position to understand organizational structure.  
+
+3. **Predominant Age Group**  
+   - Identified that the majority of employees fall into the **20–30 age group**, indicating a younger workforce.  
+
+4. **Salary Expenditure**  
+   - Determined which team and position account for the highest salary expenditure, highlighting resource allocation.  
+
+5. **Correlation Between Age and Salary**  
+   - Investigated the relationship between age and salary.  
+   - Found a **positive correlation**, with salaries tending to increase with age.  
+
+---
+
+## Visualizations
+
+- **Donut Chart:** Age group distribution.  
+- **Lollipop Chart (Horizontal):** Salary expenditure by team.  
+- **Treemap:** Salary expenditure by position.  
 - **Scatterplot + Regression Line:** Correlation between Age and Salary.  
-- **Density Plot (KDE):** Smooth contours showing joint distribution of Age and Salary.  
+- **Density Plot (KDE):** Smooth contours showing clustering of Age vs Salary.  
 - **Hexbin Plot:** Density visualization using hexagonal bins.  
 - **Jointplot (KDE):** Combined density contours with marginal distributions.  
 
 ---
 
-## 💡 Insights Gained
-- Majority of employees fall in the **20–30 age group**, indicating a younger workforce.  
-- Certain teams consume a **disproportionate share of salary expenditure**, highlighted in lollipop charts.  
-- A **positive correlation** exists between Age and Salary, with salaries tending to increase with age.  
-- Density plots reveal clustering of salaries in specific age ranges, supporting the regression findings.  
+## Insights
+
+- The workforce is predominantly young, with most employees in the **20–30 age group**.  
+- Certain teams consume a **disproportionate share of salary expenditure**, which may indicate specialized or high-value roles.  
+- Salary expenditure varies significantly across positions, with some roles commanding higher costs.  
+- A clear **positive correlation** exists between age and salary, though clustering suggests salary growth stabilizes in certain age ranges.  
 
 ---
 
-## ⚙️ Tools & Technologies
+## Tools & Technologies
+
 - **Python** (pandas, numpy, seaborn, matplotlib, statsmodels, scipy)  
 - **Jupyter Notebook** for interactive analysis and documentation  
 - **GitHub** for version control and project submission  
 
 ---
 
-## 📂 Repository Structure
-```
-salary-analysis-project/
-│
-├── data/
-│   └── salary_data.csv        # Dataset
-│
-├── salary_analysis.ipynb      # Jupyter Notebook with code & documentation
-├── README.md                  # Project overview
-├── .gitignore                 # Ignore unnecessary files
-└── LICENSE                    # MIT License
-```
-
----
-
-## 📜 License
-This project is licensed under the **MIT License** – free to use, modify, and distribute with attribution.
-
----
-
-✨ This description is comprehensive enough for your README file and makes your repository look professional and well-documented.  
-
-Would you like me to also **draft the exact README.md file with Markdown formatting** (ready to paste), including headers, emojis, and clean structure?
+## Repository Structure
+licensed under the **MIT License** – free to use, modify, and distribute with attribution.
